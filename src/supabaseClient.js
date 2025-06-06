@@ -6,7 +6,7 @@ const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZS
 export const supabase = createClient(supabaseUrl, supabaseKey)
 
 
-export async function guardarPuntaje(nombre, puntaje) {
+export const guardarPuntaje = async (nombre, puntaje) => {
   const { data, error } = await supabase.from('puntajes').insert([
     {
       nombre: nombre,
