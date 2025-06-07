@@ -58,7 +58,7 @@ function App() {
 
   const handleStartRound = () => {
     setShowCircle(false)
-    const delay = Math.random() * 1000 + 500
+    const delay = Math.random() * 500 + 100
     setTimeout(() => {
       setStartTime(Date.now())
       const containerWidth = 600
